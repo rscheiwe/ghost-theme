@@ -1,0 +1,23 @@
+{{!--USER GUIDE: Change "demowebsite" with your own Disqus site-id.  --}}
+
+<div class="graybg fullwidthrow">
+  <div class="container">
+      <div id="comments" class="row justify-content-center">        
+        <div class="col-md-8">
+          <div id="disqus_thread"></div>
+          <script>
+          var disqus_config = function () {
+          this.page.url = '{{url absolute="true"}}';
+          this.page.identifier = 'ghost-{{comment_id}}';
+          };
+          (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://demowebsite.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+          </script>
+        </div>
+      </div>
+  </div>
+</div>

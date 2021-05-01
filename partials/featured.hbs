@@ -1,0 +1,23 @@
+<div class="sticky-top sticky-sidebar-offset mt-5 mt-md-0">  
+  <div class="section-title">
+  <h2><span class="title">{{t "Featured"}}</span></h2>
+  </div>
+  <ol class="list-featured">
+    {{#get "posts" filter="featured:true" limit="5" as |featured|}}
+      {{#foreach featured}}
+        <li class="loved-item mb-4"> 
+          <span>
+            <h6 class="font-weight-bold"> 
+              <a class="text-dark" href="{{url}}"> {{title}}
+              </a>
+            </h6>
+            <p class="card-text text-opacity">
+              {{excerpt words="12"}}...
+            </p>
+          </span>
+        </li>
+      {{/foreach}}
+    {{/get}}
+  </ol>
+</div>
+

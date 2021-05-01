@@ -1,0 +1,29 @@
+<div class="postcard {{#has tag="welcome"}}is-sticky{{/has}} {{^is "paged"}}{{#has number="1,2,3,4,5"}}is-top-post-card{{/has}}{{/is}}">
+   <div class="card border-0 mb-4">   
+      <div class="card-content">
+        {{#if feature_image}}
+         <a href="{{url}}">
+         <img src="{{feature_image}}" class="card-feat-image">
+         </a>
+        {{/if}}
+         <div class="card-body d-flex flex-column align-items-start">
+         <h2>
+         <a class="text-dark" href="{{url}}">{{title}}</a>
+         </h2>
+         <p class="card-text text-opacity">
+         {{excerpt words="18"}}...
+         </p>
+         </div>
+      </div>
+      <div class="card-footer">
+         <div class="wrapfooter d-flex align-items-center">
+         <div class="author-meta">
+           <span class="post-name d-block"><a href="{{primary_author.url}}">{{primary_author.name}}</a> {{#if tags}} <span class="dot"></span> <span>{{tags}}</span> {{/if}} </span> 
+         <span class="post-date">
+         <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> {{date format="DD MMMM YYYY"}} </time> 
+         </span>
+         </div>
+         </div>
+      </div>
+   </div>
+</div> 

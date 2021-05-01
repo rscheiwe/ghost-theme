@@ -1,0 +1,19 @@
+<div class="alertbar">
+  <div class="container text-center">    
+    <div class="d-flex justify-content-lg-between align-items-center">
+      <div class="follow-links"><b>{{t "Follow us"}}</b> {{t "on"}}       
+        {{#if @blog.twitter}} 
+        <a class="followlink text-dark" target="_blank" href="{{twitter_url @blog.twitter}}"><i class="fa fa-twitter"></i></a> 
+        {{/if}}   
+        {{#if @blog.facebook}} 
+        <a class="followlink text-dark" target="_blank" href="{{facebook_url @blog.facebook}}"><i class="fa fa-facebook"></i></a> 
+        {{/if}}        
+      </div>
+      
+      {{#next_post}}
+        <div class="d-none d-lg-flex pt-3 pb-3 align-items-center"> <small class="font-weight-light mr-2">{{t "Up Next"}}:</small> <a class="text-dark font-weight-bold text-right d-flex align-items-center upnext" href="{{ url }}"> {{#if  feature_image }}<img class="thumb rounded" src="{{ feature_image }}">{{/if}} {{ title }} </a>
+        </div>
+      {{/next_post}}     
+    </div>
+  </div>
+</div>

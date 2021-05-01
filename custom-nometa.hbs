@@ -1,0 +1,34 @@
+{{!< default}}
+
+{{#post}}
+
+<section class="custom-nometa">
+  
+  <div class="row mt-3 align-items-center">  
+
+    <div class="{{#if feature_image}}col-md-6  pr-lg-4{{else}} col-md-8 {{/if}}">
+    <h1 class="posttitle display-4 postheading">{{title}}</h1>
+    <p class="text-opacity"> {{excerpt words="26"}}...</p>
+    </div>
+
+    {{#if feature_image}}
+    <div class="col-md-6">
+    <img class="featured-image img-fluid rounded" src="{{feature_image}}" alt="">
+    </div>
+    {{/if}}
+    
+  </div>
+
+  <div class="mt-4">
+    
+    <div class="article-post {{post_class}}">
+    {{content}}
+    </div>
+    
+  </div>
+  
+</section>
+
+{{/post}}
+
+{{> "alertbar"}}

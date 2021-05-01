@@ -1,0 +1,15 @@
+{{!-- Subscribe form --}}
+{{#if @labs.subscribers}}
+  <section class="row justify-content-center gh-subscribe mt-5 text-center subscribe-footer">
+    <div class="col-md-10">
+      <div class="p-5 rounded">
+        <h3 class="gh-subscribe-title secondfont">{{t "Subscribe to"}} {{@site.title}}</h3>
+        <p class="text-opacity">{{t "Get the latest posts delivered right to your inbox." }}</p>
+        {{subscribe_form placeholder="Your e-mail address"}}
+        {{#if error}}
+        <p class="main-error">{{ error.message }}</p>
+        {{/if}}
+      </div>
+    </div>
+  </section>
+{{/if}}

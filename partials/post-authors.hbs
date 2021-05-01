@@ -1,0 +1,10 @@
+<div class="post-top-meta mb-2 d-flex align-items-center">  
+{{#if authors}}
+<span class="text-opacity">{{t "Written by"}}</span>
+{{#foreach authors}}
+<a href="{{url}}" class="authorname">
+{{#if profile_image}} <img width="30" class="author-thumb-small rounded-circle ml-2" src="{{profile_image}}" alt="{{name}}" title="{{name}} {{else}} {{ name }} {{/if}}"/>
+</a>
+{{/foreach}}
+{{/if}}
+</div>

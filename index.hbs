@@ -1,0 +1,55 @@
+{{!< default}}
+
+<div class="fullwidthrow top-posts-home">
+  <div class="container-fluid pl-0 pr-0 pl-lg-4 pr-lg-4 pl-xl-5 pr-xl-5">
+    <div class="row listrecent justify-content-center">
+      {{#get "posts" include="tags,authors" filter="tag:-welcome"}}
+        {{#foreach posts from="1" to="1"}}
+            <div class="col-12 col-md-4 col-lg-4 col-xl-4 topleft">
+              {{> "post-card"}}
+            </div>      
+        {{/foreach}}
+        <div class="col-12 col-md-4 col-lg-4 col-xl-4 topmiddle">
+          {{#foreach posts from="2" to="4"}}
+            {{> "post-card"}}
+          {{/foreach}}
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 col-xl-3 topright">
+          {{#foreach posts from="5" to="5"}}
+            {{> "post-card"}}
+          {{/foreach}}
+        </div>
+      {{/get}}
+    </div>
+  </div>
+</div>
+
+{{#get "posts" filter="tags:[welcome]" limit="1"}}
+  {{#foreach posts}}
+  <div class="introjumbo jumbotron sticky-home rounded-0 mt-4 mb-5 p-0 bglight position-relative post-sticky"><div class="row justify-content-between">
+    <div class="col-md-6 pt-5 pb-5 pl-5 pr-5 align-self-center">
+      <h2 class="mb-3 secondfont font-weight-bold"> {{title}}</h2>
+      <p class="mb-4 text-opacity"> {{excerpt words="26"}}...</p> 
+      <a href="{{url}}" class="btn btn-dark"> {{t "Read more"}}</a>
+    </div>
+    <div class="col-md-6 p-0 text-right bgcover d-none d-md-block" style="background-size: cover;background-image:url({{feature_image}});"></div>
+    </div>
+  </div>
+  {{/foreach}}
+{{/get}}
+
+<div class="row mt-4">  
+  <div class="col-md-8 pr-md-5 order-first allstories homeindexstories">
+    <div class="section-title">
+      <h2><span class="title">{{t "All Stories"}}</span></h2>
+    </div>
+    {{#foreach posts}}
+    {{> "post-card"}}
+    {{/foreach}}
+    {{pagination}}   
+    {{> "taglist"}}    
+  </div>
+  <div class="col-md-4">
+    {{> "featured"}}
+  </div>
+</div>

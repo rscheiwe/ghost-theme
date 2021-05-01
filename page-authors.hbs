@@ -1,0 +1,38 @@
+{{!< default}}
+
+<div class="row mt-4">
+  <div class="col-md-8 pr-md-5 allstories">
+    <div class="section-title">
+    <h2><span class="title">{{t "Contributors"}}</span></h2>
+    </div>
+    {{#get "authors" include="count.posts"}}
+    {{#foreach authors}}
+    
+    <div class="shadow-2 p-4 d-block d-md-flex text-center text-md-left mb-30">
+      
+      <div class="col-md-2">
+        <div class="d-block"><img class="rounded-circle" src="{{profile_image}}" height="60" width="60"></div> 
+        <a href="{{url}}" class="btn btn-outline-success btn-sm mt-3">{{t "Profile"}}</a>
+      </div>
+      
+      <div class="col-md-10"> 
+        <a href="{{url}}"><h4 class="text-dark mt-4 mt-md-0 font-weight-bold mb-0"> {{name }} </h4> </a>
+        {{#if website}} <a class="d-inline-block" target="_blank" href="{{website}}">{{website}}</a> {{/if}}
+        <div class="text-opacity mt-2"> {{bio}}</div>
+        <div class="mt-3">             
+            {{#if facebook}} <a class="text-dark" target="_blank" href="{{facebook_url}}"><i class="fa fa-facebook"></i></a> {{/if}}
+            {{#if twitter}} &nbsp; <a class="text-dark" target="_blank" href="{{twitter_url}}"><i class="fa fa-twitter"></i></a> {{/if}}
+        </div>
+      </div>
+      
+    </div>
+    
+    {{/foreach}}
+    {{/get}}   
+  
+    {{> "taglist"}}
+  </div>
+  <div class="col-md-4">
+    {{> "featured"}}
+  </div>
+</div>

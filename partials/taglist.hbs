@@ -1,0 +1,21 @@
+{{#get 'tags' limit='all'  filter="slug:-welcome" include='count.posts' order='count.posts desc'}}
+  <div class="row">
+    {{#foreach tags}}
+      <div class="col-4 mt-4">
+        <div class="text-uppercase font-weight-bold mb-2">
+          <a class="text-dark font-weight-bold" href="{{ url }}" alt="{{ name }}">{{ name }}</a>
+        </div> 
+        {{#if feature_image }}
+        <a href="{{ url }}"> 
+          <img class="rounded" src="{{ feature_image }}"> 
+        </a> 
+        {{/if}}
+        <a class="text-opacity d-block mt-1" href="{{ url }}">
+          <span class="countbytag">{{ count.posts }} Stories</span>
+        </a>
+      </div>
+    {{/foreach}}
+  </div>
+{{/get}}
+
+

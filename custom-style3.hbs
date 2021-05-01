@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{#post}}
+
+<div class="row">
+
+  <div class="col-lg-8 col-md-10 col-xs-12 flex-first flex-md-unordered">
+    <div class="mainheading">
+      {{> "post-authors"}}
+      <h1 class="posttitle display-5 postheading">{{title}}</h1>
+      {{> "post-meta"}}
+    </div>
+    <img class="featured-image img-fluid" src="{{feature_image}}" alt="">
+    <div class="article-post {{post_class}}">
+      {{content}}
+    </div>
+    {{> "post-tags"}}
+  </div>
+  
+  <div class="col-lg-2 col-md-2 col-xs-12 order-md-first">
+    <div class="sticky-top sticky-sidebar-offset">
+      {{> "share"}}
+    </div>
+  </div>
+
+</div>
+
+{{> "disqus"}}
+
+{{> "alertbar"}}
+
+{{/post}}

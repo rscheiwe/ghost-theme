@@ -1,0 +1,9 @@
+<div class="after-post-tags">
+{{#if tags}}
+<ul class="tags">
+{{#foreach tags}}
+<li><a href="{{url}}" title="{{name}}" class="tag tag-{{comment_id}} {{slug}}">{{name}}</a></li>
+{{/foreach}}
+</ul>
+{{/if}}
+</div>

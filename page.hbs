@@ -1,0 +1,23 @@
+{{!< default}}
+{{#post}}
+
+{{#if feature_image}}
+<div class="fullwidthrow mtneg30">
+<img class="featured-image full-width-featured-image mb-0 img-fluid" src="{{feature_image}}" alt="">
+</div> 
+{{/if}}
+
+<div class="row justify-content-center mt-4">
+<div class="col-lg-8 col-md-10 col-xs-12 flex-first flex-md-unordered">
+    <div class="mainheading">
+      {{> "post-authors"}}
+      <h1 class="posttitle display-5 postheading">{{title}}</h1>
+      {{> "post-meta"}}
+    </div>   
+    <div class="article-post {{post_class}}">
+      {{content}}
+    </div>
+  </div>
+</div>
+
+{{/post}}

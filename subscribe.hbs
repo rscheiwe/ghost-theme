@@ -1,0 +1,31 @@
+{{!< default}}
+<section class="min400">
+  
+  {{^if success}}
+
+  <div class="row justify-content-center gh-subscribe mt-5 text-center secondfont">
+      <div class="col-md-10">
+        <div class="p-5 rounded">
+          <h3 class="gh-subscribe-title secondfont">{{t "Subscribe to"}} {{@site.title}}</h3>
+          <p>{{t "Get the latest posts delivered right to your inbox."}}</p>
+          {{subscribe_form placeholder="Your e-mail address"}}       
+        </div>
+      </div>
+  </div>  
+
+  {{else}}
+
+  <div class="row justify-content-center gh-subscribe mt-5 text-center secondfont">
+      <div class="col-md-10">
+        <div class="p-5 rounded">
+          <h3 class="gh-subscribe-title secondfont">{{t "Subscribed to"}} {{@site.title}}</h3>
+          <p>{{t "You've successfully subscribed to"}} <em>{{@site.title}}</em> {{t "with the email address"}} <em>{{email}}</em>.</p>
+        </div>
+      </div>
+  </div>
+
+  {{/if}}
+  
+</section>
+
+<style>.subscribe-footer {display:none;}</style>
