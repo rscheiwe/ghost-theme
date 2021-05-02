@@ -6,11 +6,11 @@ Copyright:WowThemes.net,https://www.wowthemes.net
 body {
   padding-top: 90px;
   overflow-x: hidden;
-  font-family: Source Sans Pro, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .secondfont {
-  font-family: Lora, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 body.post-template {
@@ -112,7 +112,7 @@ ol.list-featured li:before {
   font-weight: bold;
   font-size: 2rem;
   margin-right: 0.5rem;
-  font-family: Arial;
+  font-family: 'Exo 2', sans-serif;
   opacity: .15;
   line-height: 1;
 }
@@ -395,14 +395,14 @@ span.post-read-more a:hover {
 }
 
 .article-post {
-  font-family: Lora;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1.2rem;
   line-height: 1.8;
   color: rgba(0, 0, 0, .8);
 }
 
 .page-template .article-post {
-  font-family: "Source Sans Pro";
+  font-family: 'Exo 2', sans-serif;
   line-height: 1.7;
 }
 
@@ -437,7 +437,7 @@ ul {
   margin: 0 0 2rem 0;
 }
 blockquote {
-  font-family:Lora;
+  font-family:'Exo 2', sans-serif;
 }
 .featured-image {
   display: block;
@@ -770,7 +770,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Exo 2', sans-serif !important;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .article-post .h1,
@@ -1233,7 +1233,7 @@ figcaption {
   padding-top: 5px;
   background: #fff;
   text-align: center;
-  font-family:Lora;
+  font-family:'Exo 2', sans-serif;
 }
 
 article figure {
@@ -1358,4 +1358,10 @@ article figcaption {
   .postcard h2 {  font-size: 1.45rem;}
   .topmiddle h2 {  font-size: 1.2rem; }
   
+}
+
+@media (max-width:992px) {
+  .nav-logo-collapse-holder {
+    display: none;
+  }
 }
