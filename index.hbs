@@ -10,7 +10,7 @@
             </div>      
         {{/foreach}}
         <div class="col-12 col-md-4 col-lg-4 col-xl-4 topmiddle">
-          {{#foreach posts from="2" to="4"}}
+          {{#foreach posts from="2" to="5"}}
             {{> "post-card"}}
           {{/foreach}}
         </div>
@@ -24,12 +24,12 @@
   </div>
 </div>
 
-{{#get "posts" filter="tags:[welcome]" limit="1"}}
+{{#get "posts" filter="tags:[new-tag]" limit="1"}}
   {{#foreach posts}}
   <div class="introjumbo jumbotron sticky-home rounded-0 mt-4 mb-5 p-0 bglight position-relative post-sticky"><div class="row justify-content-between">
     <div class="col-md-6 pt-5 pb-5 pl-5 pr-5 align-self-center">
       <h2 class="mb-3 secondfont font-weight-bold"> {{title}}</h2>
-      <p class="mb-4 text-opacity"> {{excerpt words="26"}}...</p> 
+      <p class="mb-4 text-opacity"> {{excerpt words="26"}}...</p>
       <a href="{{url}}" class="btn btn-dark"> {{t "Read more"}}</a>
     </div>
     <div class="col-md-6 p-0 text-right bgcover d-none d-md-block" style="background-size: cover;background-image:url({{feature_image}});"></div>
@@ -38,7 +38,7 @@
   {{/foreach}}
 {{/get}}
 
-<div class="row mt-4">  
+<div class="row mt-4">
   <div class="col-md-8 pr-md-5 order-first allstories homeindexstories">
     <div class="section-title">
       <h2><span class="title">{{t "All Stories"}}</span></h2>
