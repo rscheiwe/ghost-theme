@@ -1360,8 +1360,8 @@ article figcaption {
   
 }
 
-@media (max-width:992px) {
+@media (min-width:992px) {
   .nav-logo-collapse-holder {
-    display: none;
+    display: none !important;
   }
 }
