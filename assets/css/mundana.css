@@ -1251,7 +1251,7 @@ article figcaption {
 
 .kg-bookmark-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: unset;
   flex-direction: row-reverse;
   color: currentColor;
   font-family: inherit;
@@ -1365,3 +1365,5 @@ article figcaption {
     display: none !important;
   }
 }
+
+.kg-image-card img { height: auto; }
