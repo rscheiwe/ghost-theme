@@ -19,6 +19,36 @@
     {{!--      adding custom font--}}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    {{!--      social icons--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .gh-head-menu .nav-facebook a,
+        .gh-head-menu .nav-github a,
+        .gh-head-menu .nav-instagram a,
+        .gh-head-menu .nav-mastodon a,
+        .gh-head-menu .nav-tiktok a,
+        .gh-head-menu .nav-twitter a {
+          font-size: 0 !important;
+        }
+        .gh-head-menu .nav-facebook a::before,
+        .gh-head-menu .nav-github a::before,
+        .gh-head-menu .nav-instagram a::before,
+        .gh-head-menu .nav-mastodon a::before,
+        .gh-head-menu .nav-tiktok a::before,
+        .gh-head-menu .nav-twitter a::before {
+          font-family: "Font Awesome 6 Brands";
+          display: inline-block;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
+        .gh-head-menu .nav-twitter a::before {
+          content: "\f099";
+        }
+    </style>
     {{!-- Ghost outputs important style and meta data with this tag --}}
     <script src="{{asset "js/jquery.min.js"}}"></script>  
     {{ghost_head}}
