@@ -360,6 +360,10 @@ span.post-read-more a:hover {
   font-size: 0.96rem;
 }
 
+.nav-item {
+    align-self: center
+}
+
 .mediumnavigation .search-icon {
   margin-left: -40px;
   display: inline-block;

@@ -23,13 +23,16 @@
             <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a>
             </li>
             {{/foreach}}
+            <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}">
+                <div class="gh-head-menu">
+                    <div class="nav-twitter">
+                        <a class="nav-link" href="https://www.twitter.com/ghostheretical" target="_blank" rel="noopener"></a>
+                    </div>
+                </div>
+            </li>
          </ul>
          <!-- End Menu -->
-         <div class="gh-head-menu">
-         <div class="nav-twitter">
-            <a></a>
-         </div>
-         </div>
+
          <!-- Begin Search -->
          <form id="nav-search-form" class="form-inline my-2 my-lg-0 hidden-md-down"> 
            <input id="search-input" class="form-control mr-sm-2" type="text" placeholder="{{t "Search..."}}" />
